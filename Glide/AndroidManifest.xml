@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cdc.glide"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="24" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        
+        
+          <!-- 声明widget对应的AppWidgetProvider -->
+        <receiver android:name=".ExampleAppWidgetProvider">
+            <intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+		<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/appwidget_info"/>
+        </receiver>
+        
+        
+        <activity
+            android:name=".GlideSample"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- base -->
+        <activity
+            android:name=".BaseImage"
+            android:label="Base/image" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BaseImageProError"
+            android:label="Base/imageProError" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BaseImageListView"
+            android:label="Base/ListView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BaseImageGridView"
+            android:label="Base/GridView" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChangePlaceHolder"
+            android:label="占位符与改变尺寸/占位符合动画" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChangeSize"
+            android:label="占位符与改变尺寸/改变尺寸" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GifVideoGif"
+            android:label="Gif和Video/Gif" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GifVideoVideo"
+            android:label="Gif和Video/Video" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Cache"
+            android:label="缓存" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Priority"
+            android:label="优先级" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Thumbnail"
+            android:label="缩略图" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity
+            android:name=".TargetSimple"
+            android:label="回调/TargetSimple">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".NotificationTargetActivity"
+            android:label="回调/NotificationTargetActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GetExceptionActivity"
+            android:label="监听异常">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".FileDownTarget"
+            android:label="图片下载">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

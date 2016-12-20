@@ -1,0 +1,62 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView 
+            android:id="@+id/txtPh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="placeholder占位符"/>
+        <ImageView
+            android:id="@+id/imgPh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtPh" />
+
+         <TextView 
+            android:id="@+id/txtErrorPh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgPh"
+            android:text="error占位符"/>
+        <ImageView
+            android:id="@+id/imgErrorPh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtErrorPh" />
+        
+         <TextView 
+            android:id="@+id/txtcrossFade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgErrorPh"
+            android:text="淡入淡出动画"/>
+        <ImageView
+            android:id="@+id/imgcrossFade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtcrossFade" />
+        
+        <TextView 
+            android:id="@+id/txtdontAnimate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgcrossFade"
+            android:text="dontAnimate"/>
+        <ImageView
+            android:id="@+id/imgdontAnimate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdontAnimate" />
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,62 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView 
+            android:id="@+id/txtCacheMemory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glide 将会默认将所有的图片资源放到内存缓存中去。因为，指明调用 .skipMemoryCache(false) 是没有必要的。Glide 将不会把这张图片放到内存缓存中去,但这只是会影响内存缓存！Glide 将会仍然利用磁盘缓存来避免重复的网络请求。"/>
+        <ImageView
+            android:id="@+id/imgCacheMemory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCacheMemory" />
+
+         <TextView 
+            android:id="@+id/txtCacheDisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCacheMemory"
+            android:text="diskCacheStrategy( DiskCacheStrategy.NONE )这段代码片段中将不会被保存在磁盘缓存中。然而，默认的它将仍然使用内存缓存！"/>
+        <ImageView
+            android:id="@+id/imgCacheDisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCacheDisk" />
+        
+         <TextView 
+            android:id="@+id/txtCacheMemoryDisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCacheDisk"
+            android:text="禁掉内存缓存和磁盘缓存"/>
+        <ImageView
+            android:id="@+id/imgCacheMemoryDisk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtCacheMemoryDisk" />
+        
+        <TextView 
+            android:id="@+id/txtUri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCacheMemoryDisk"
+            android:text="(3.6.1以及最新的3.7.0 .diskCacheStrategy()默认都是DiskCacheStrategy.RESULT)自定义磁盘缓存行为:如果你请求的一个图像是 1000x1000 像素的，但你的 ImageView 是 500x500 像素的，Glide 将会把这两个尺寸都进行缓存.DiskCacheStrategy.NONE 什么都不缓存;DiskCacheStrategy.SOURCE 仅仅只缓存原来的全分辨率的图像。在我们上面的例子中，将会只有一个 1000x1000 像素的图片;DiskCacheStrategy.RESULT 仅仅缓存最终的图像，即，降低分辨率后的（或者是转换后的）;DiskCacheStrategy.ALL 缓存所有版本的图像（默认行为）"/>
+        
+        
+        
+        
+        
+    </RelativeLayout>
+
+</ScrollView>

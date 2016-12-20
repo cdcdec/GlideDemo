@@ -1,0 +1,52 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView 
+            android:id="@+id/txtOverride"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="对于 Glide，如果图片不会自动适配到 ImageView，调用 override(horizontalSize, verticalSize) 。这将在图片显示到 ImageView之前重新改变图片大小。"/>
+        <ImageView
+            android:id="@+id/imgOverride"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/txtOverride" />
+
+         <TextView 
+            android:id="@+id/txtCenterCrop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgOverride"
+            android:text="CenterCrop()是一个裁剪技术，即缩放图像让它填充到 ImageView 界限内并且裁剪额外的部分。ImageView 可能会完全填充，但图像可能不会完整显示。"/>
+        <ImageView
+            android:id="@+id/imgCenterCrop"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/txtCenterCrop" />
+        
+         <TextView 
+            android:id="@+id/txtFitCenter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgCenterCrop"
+            android:text="fitCenter() 是裁剪技术，即缩放图像让图像都测量出来等于或小于 ImageView 的边界范围。该图像将会完全显示，但可能不会填满整个 ImageView。"/>
+        <ImageView
+            android:id="@+id/imgFitCenter"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/txtFitCenter" />
+        
+     
+    </RelativeLayout>
+
+</ScrollView>
