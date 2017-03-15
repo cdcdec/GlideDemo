@@ -50,6 +50,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".BaseImageNameNoChange"
+            android:label="Base/ImageNameNoChange" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="com.cdc.glidesample.path" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".BaseImageProError"
             android:label="Base/imageProError" >
             <intent-filter>
